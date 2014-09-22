@@ -25,7 +25,7 @@ class packstack {
   package { 'rdo-release':
     provider => 'rpm',
     source   => '/opt/rdo-release.rpm',
-    require  => File["/opt/rdo-release.rpm"],
+    require  => Exec["rdo-repo"],
   }
 
   package { "openstack-packstack":
