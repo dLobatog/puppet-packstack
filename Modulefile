@@ -1,0 +1,8 @@
+name    'elobato-packstack'
+version '0.1.0'
+source 'Daniel Lobato Garcia'
+author 'Daniel Lobato Garcia'
+license 'Apache License, Version 2.0'
+summary 'This module sets up packstack and installs it.'
+description 'This module sets up packstack and installs it.'
+project_page 'https://github.com/elobato/puppet-packstack'
