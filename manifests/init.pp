@@ -17,7 +17,7 @@
 # Copyright 2014 Daniel Lobato Garcia, Apache 2.0 license
 #
 class packstack {
-  file { "/opt/rdo-release.rpm": source => "https://rdo.fedorapeople.org/rdo-release.rpm"}
+  file { "/opt/rdo-release.rpm": source => "http://rdo.fedorapeople.org/rdo-release.rpm"}
 
   package { 'rdo-release':
     provider => 'rpm',
