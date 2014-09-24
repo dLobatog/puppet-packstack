@@ -1,0 +1,32 @@
+{
+  "name": "elobato-packstack",
+  "version": "0.0.1",
+  "author": "Daniel Lobato",
+  "license": "Licensed under (Apache 2.0)",
+  "summary": "This module only installs packstack, and the packstack repo from RDO, no parameters, no frills.",
+  "source": "https://github.com/elobato/puppet-packstack",
+  "project_page": "(https://forge.puppetlabs.com/elobato/packstack)",
+  "issues_url": "https://github.com/elobato/puppet-packstack/issues",
+  "tags": ["packstack", "openstack"],
+  "operatingsystem_support": [
+      {
+          "operatingsystem":"RedHat",
+          "operatingsystemrelease":[ "6.0", "7.0" ]
+          },
+      {
+          "operatingsystem": "CentOS",
+          "operatingsystemrelease": [ "6", "7" ]
+          },
+      {
+          "operatingsystem": "Fedora",
+          "operatingsystemrelease": [ "19", "20", "21" ]
+          },
+      {
+          "operatingsystem": "Scientific",
+          "operatingsystemrelease": [ "4", "5", "6", "7" ]
+          }
+     ]
+  "dependencies": [
+      { "name": "maestrodev/wget", "version_requirement": ">1.0.0" }
+    ]
+}

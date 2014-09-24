@@ -17,15 +17,17 @@
 # Copyright 2014 Daniel Lobato Garcia, Apache 2.0 license
 #
 class packstack {
-  exec{'rdo-repo':
-    command => "/usr/bin/wget -q http://rdo.fedorapeople.org/rdo-release.rpm -O /opt/rdo-release.rpm",
-    creates => "/opt/rdo-release.rpm",
+  wget::fetch { "rdo-repo":
+    source      => 'https://rdo.fedorapeople.org/rdo-release.rpm',
+    destination => '/opt/rdo-release.rpm',
+    timeout     => 0,
+    verbose     => false,
   }
 
   package { 'rdo-release':
     provider => 'rpm',
     source   => '/opt/rdo-release.rpm',
-    require  => Exec["rdo-repo"],
+    require  => Wget::Fetch["rdo-repo"],
   }
 
   package { "openstack-packstack":
